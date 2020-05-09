@@ -1,0 +1,114 @@
+\documentclass[hidelinks, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{textcomp}
+
+% Java Code Inclusion
+\usepackage{listings}
+
+% Color Management
+\usepackage{color}
+
+% Multi-Line Comments
+\usepackage{comment}
+
+% Customisable Sections
+\usepackage{titlesec}
+
+% Images and Captions
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\graphicspath{{./screenshots/}}
+
+% Plotting Equations
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.16}
+
+% Bibliography Storage
+\usepackage{cite}
+\usepackage[nottoc]{tocbibind}
+
+% Clickable Contents Page
+\usepackage{hyperref}
+
+% Allowing lower levels of Contents Page
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{5}
+
+% Color setting for code styling
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Code styling
+\lstset{frame=none,
+  xleftmargin=12pt,
+  language=Java,
+  aboveskip=1mm,
+  belowskip=2mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+%Title Formatting
+\titleformat{\paragraph}[wrap]
+{\normalfont\bfseries}
+{\theparagraph.}{0.5em}{}
+ 
+\titlespacing{\paragraph}{12pc}{3ex plus .1ex minus .2ex}{1pc}
+
+\restylefloat{table}
+
+\title{CSXXXX Week X}
+\author{ID: 180019721}
+\begin{document} 
+\maketitle
+\begin{center}
+Word Count: XXXX words
+\end{center}
+\tableofcontents
+
+\newpage
+
+\section{Overview}
+
+\section{Design and Implementation}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.05]{Sample.png}
+\caption{Sample Figure}
+\label{fig:image1}
+\end{figure}
+
+Sample Reference\cite{1}
+
+\subsection{Documentation}
+Documentation was also written and compiled for this project, and is available within the filespace, at /documentation/index.html, or by clicking \href{run:./documentation/index.html}{\textbf{here}}.
+
+\section{Evaluation and Conclusion}
+
+\newpage
+
+\nocite{*}
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography/sample}
+
+\listoffigures
+
+\end{document}
+
+
+
+
