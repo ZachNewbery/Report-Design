@@ -10,6 +10,17 @@
 % Color Management
 \usepackage{color}
 
+% To-Do Listings
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
 % Multi-Line Comments
 \usepackage{comment}
 
@@ -29,9 +40,13 @@
 % Bibliography Storage
 \usepackage{cite}
 \usepackage[nottoc]{tocbibind}
+\usepackage{ragged2e}
 
 % Clickable Contents Page
 \usepackage{hyperref}
+
+% Appendices
+\usepackage[toc,page]{appendix}
 
 % Allowing lower levels of Contents Page
 \setcounter{tocdepth}{4}
@@ -70,7 +85,7 @@
 
 \restylefloat{table}
 
-\title{CSXXXX Week X}
+\title{\includegraphics[scale=0.025]{Sample.png} \\ CSXXXX Week X}
 \author{ID: 180019721}
 \begin{document} 
 \maketitle
@@ -102,8 +117,11 @@ Documentation was also written and compiled for this project, and is available w
 \newpage
 
 \nocite{*}
+\begingroup
+\RaggedRight
 \bibliographystyle{plain}
 \bibliography{bibliography/sample}
+\endgroup
 
 \listoffigures
 
